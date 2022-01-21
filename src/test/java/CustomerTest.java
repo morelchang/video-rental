@@ -26,5 +26,5 @@ public class CustomerTest {
                 "You owed 19.0\n" +
                 "You earned 7 frequent renter points",
                 customer.statement());
-      }
+    }
 }
