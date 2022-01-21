@@ -28,8 +28,7 @@ public class Customer {
             Rental each = (Rental) rentals.next();
 
             // add frequent renter points
-            int bonusPoints = each.getFrequentRenterPoints();
-            frequentRenterPoints += bonusPoints;
+            frequentRenterPoints += each.getFrequentRenterPoints();
 
             // show figures for this rental
             result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
