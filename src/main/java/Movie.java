@@ -38,4 +38,12 @@ public class Movie {
     double getCharge(int daysRented) {
         return _price.getCharge(daysRented);
     }
+
+    int getFrequentRenterPoints(int daysRented) {
+        int bonusPoints = 1;
+        // add bonus for a two day new release rental
+        if (getPriceCode() == Movie.NEW_RELEASE && daysRented > 1)
+            bonusPoints++;
+        return bonusPoints;
+    }
 }

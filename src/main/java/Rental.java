@@ -16,20 +16,10 @@ class Rental {
     }
 
     double getCharge() {
-        int daysRented = getDaysRented();
-        return getCharge(daysRented);
-    }
-
-
-    private double getCharge(int daysRented) {
-        return _movie.getCharge(daysRented);
+        return _movie.getCharge(_daysRented);
     }
 
     int getFrequentRenterPoints() {
-        int bonusPoints = 1;
-        // add bonus for a two day new release rental
-        if (getMovie().getPriceCode() == Movie.NEW_RELEASE && getDaysRented() > 1)
-            bonusPoints++;
-        return bonusPoints;
+        return _movie.getFrequentRenterPoints(_daysRented);
     }
 }
